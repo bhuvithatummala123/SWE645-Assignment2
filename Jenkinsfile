@@ -25,7 +25,11 @@ pipeline {
                     usernameVariable: 'DOCKER_USERNAME',
                     passwordVariable: 'DOCKER_PASSWORD'
                 )]) {
-                    bat 'echo %DOCKER_PASSWORD% | "%DOCKER_PATH%" login -u %DOCKER_USERNAME% --password-stdin'
+
+                    powershell '''
+                        $env:DOCKER_PASSWORD | & "$env:DOCKER_PATH" login -u "$env:DOCKER_USERNAME" --password-stdin
+                    '''
+
                     bat '"%DOCKER_PATH%" push %DOCKER_IMAGE%:%BUILD_NUMBER%'
                     bat '"%DOCKER_PATH%" push %DOCKER_IMAGE%:latest'
                 }
