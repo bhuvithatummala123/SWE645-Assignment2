@@ -1,0 +1,15 @@
+# SWE 645 Assignment 2
+# This Service exposes the student survey application running in the Kubernetes pods.
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: swe645-survey-service
+spec:
+  selector:
+    app: swe645-survey
+  type: LoadBalancer
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80

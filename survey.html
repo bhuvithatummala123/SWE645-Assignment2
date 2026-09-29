@@ -1,0 +1,484 @@
+<!--
+Name: Bhuvitha Tummala
+G Number: G01576792
+Course: SWE 645
+Assignment: Assignment 1
+Purpose:  Student survey form for collecting student information, campus preferences, interests, recommendations, and comments.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Student Survey</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+    <!-- Header -->
+
+    <header class="survey-header">
+
+        <h1>CS Department Survey</h1>
+
+        <p>George Mason University</p>
+
+    </header>
+
+
+    <!-- Survey -->
+
+    <main class="survey-container">
+
+        <form action="#" method="post">
+
+
+            <!-- First Name -->
+
+            <div class="form-group">
+
+                <label for="firstName">
+                    First Name <span class="required">*</span>
+                </label>
+
+                <input
+                    type="text"
+                     id="firstName"
+                     name="firstName"
+                     pattern="[A-Za-z]+"
+                     title="First name should contain alphabets only."
+                     required>
+
+            </div>
+
+
+            <!-- Last Name -->
+
+            <div class="form-group">
+
+                <label for="lastName">
+                    Last Name <span class="required">*</span>
+                </label>
+
+                <input
+                     type="text"
+                     id="lastName"
+                     name="lastName"
+                     pattern="[A-Za-z]+"
+                     title="Last name should contain alphabets only."
+                     required>
+            </div>
+
+
+            <!-- Street Address -->
+
+            <div class="form-group">
+
+                <label for="street">
+                    Street Address <span class="required">*</span>
+                </label>
+
+                <input
+                   type="text"
+                   id="street"
+                   name="street"
+                   pattern="[A-Za-z0-9 ]+"
+                   title="Street address should contain letters, numbers, and spaces only."
+                   placeholder="4400 University Drive"
+                   required>
+
+            </div>
+
+
+            <!-- City -->
+
+            <div class="form-group">
+
+                <label for="city">
+                    City <span class="required">*</span>
+                </label>
+
+                <input
+                    type="text"
+                    id="city"
+                    name="city"
+                    required>
+
+            </div>
+
+
+            <!-- State -->
+
+            <div class="form-group">
+
+                <label for="state">
+                    State <span class="required">*</span>
+                </label>
+
+                <input
+                    type="text"
+                    id="state"
+                    name="state"
+                    required>
+
+            </div>
+
+
+            <!-- Zip -->
+
+            <div class="form-group">
+
+                <label for="zip">
+                    ZIP <span class="required">*</span>
+                </label>
+
+                <input
+                     type="text"
+                     id="zip"
+                     name="zip"
+                     pattern="[0-9]{5}"
+                     minlength="5"
+                     maxlength="5"
+                     title="ZIP code must contain exactly 5 digits."
+                     placeholder="22030"
+                    required>
+
+            </div>
+
+
+            <!-- Telephone -->
+
+            <div class="form-group">
+
+                <label for="telephone">
+                    Telephone Number <span class="required">*</span>
+                </label>
+
+              <input
+                    type="tel"
+                 id="telephone"
+                 name="telephone"
+                 pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                  title="Telephone number must be in the format 703-993-1000."
+                 placeholder="703-993-1000"
+                 required>
+
+            </div>
+
+
+            <!-- Email -->
+
+            <div class="form-group">
+
+                <label for="email">
+                    E-mail <span class="required">*</span>
+                </label>
+
+                <input
+                     type="email"
+                     id="email"
+                     name="email"
+                     pattern="[A-Za-z0-9._%+-]+@gmu\.edu"
+                     title="Please enter a valid GMU email address ending with @gmu.edu."
+                     placeholder="username@gmu.edu"
+                      required>
+
+            </div>
+
+
+            <!-- Date -->
+
+            <div class="form-group">
+
+                <label for="surveyDate">
+                    Date of Survey <span class="required">*</span>
+                </label>
+
+                <input
+                    type="date"
+                    id="surveyDate"
+                    name="surveyDate"
+                    required>
+
+            </div>
+
+
+            <!-- Campus -->
+
+            <div class="form-group">
+
+                <p class="question">
+
+                    What did you like most about the campus?
+                    
+                </p>
+
+
+                <label class="inline-option">
+
+                    <input
+                        type="checkbox"
+                        name="campus"
+                        value="students">
+
+                    Students
+
+                </label>
+
+
+                <label class="inline-option">
+
+                    <input
+                        type="checkbox"
+                        name="campus"
+                        value="location">
+
+                    Location
+
+                </label>
+
+
+                <label class="inline-option">
+
+                    <input
+                        type="checkbox"
+                        name="campus"
+                        value="campus">
+
+                    Campus
+
+                </label>
+
+
+                <label class="inline-option">
+
+                    <input
+                        type="checkbox"
+                        name="campus"
+                        value="atmosphere">
+
+                    Atmosphere
+
+                </label>
+
+
+                <label class="inline-option">
+
+                    <input
+                        type="checkbox"
+                        name="campus"
+                        value="dorm rooms">
+
+                    Dorm Rooms
+
+                </label>
+
+
+                <label class="inline-option">
+
+                    <input
+                        type="checkbox"
+                        name="campus"
+                        value="sports">
+
+                    Sports
+
+                </label>
+
+            </div>
+
+
+            <!-- Interest -->
+
+            <div class="form-group">
+
+                <p class="question">
+
+                    How did you become interested in the university?
+
+                </p>
+
+
+                <label>
+
+                    <input
+                        type="radio"
+                        name="interest"
+                        value="friends">
+
+                    Friends
+
+                </label>
+
+
+                <label>
+
+                    <input
+                        type="radio"
+                        name="interest"
+                        value="television">
+
+                    Television
+
+                </label>
+
+
+                <label>
+
+                    <input
+                        type="radio"
+                        name="interest"
+                        value="internet">
+
+                    Internet
+
+                </label>
+
+
+                <label>
+
+                    <input
+                        type="radio"
+                        name="interest"
+                        value="other">
+
+                    Other
+
+                </label>
+
+            </div>
+
+
+            <!-- Recommendation -->
+
+            <div class="form-group">
+
+                <label for="recommendation">
+
+                    Likelihood of recommending this school:
+
+                </label>
+
+
+                <select
+                    id="recommendation"
+                    name="recommendation">
+
+                    <option value="">
+                        Please select an option
+                    </option>
+
+                    <option value="Very Likely">
+                        Very Likely
+                    </option>
+
+                    <option value="Likely">
+                        Likely
+                    </option>
+
+                    <option value="Unlikely">
+                        Unlikely
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <!-- Raffle -->
+
+           <div class="form-group">
+           <label for="raffle">Raffle:</label>
+           <input
+              type="text"
+               id="raffle"
+               name="raffle"
+              placeholder="10, 25, 37, 42, 55, 61, 70, 78, 85, 99"
+              pattern="^(100|[1-9][0-9]?)(,\s*(100|[1-9][0-9]?)){9,}$"
+              title="Enter at least 10 comma-separated numbers ranging from 1 to 100.">
+            </div>
+
+
+            <!-- Comments -->
+
+            <div class="form-group">
+
+                <label for="comments">
+
+                    Additional Comments
+
+                </label>
+
+                <textarea
+                    id="comments"
+                    name="comments"
+                    rows="5">
+                </textarea>
+
+            </div>
+
+
+            <!-- Buttons -->
+
+            <div class="button-area">
+
+                <input
+                    type="submit"
+                    value="Submit Survey"
+                    class="yellow-button">
+
+
+                <input
+                    type="reset"
+                    value="Cancel"
+                    class="cancel-button">
+
+
+                <a
+                    href="index.html"
+                    class="home-button">
+
+                    Return to Home Page
+
+                </a>
+
+            </div>
+
+
+        </form>
+
+    </main>
+
+
+    <!-- Footer -->
+
+    <footer>
+
+        <p>
+            &copy; 2026 Bhuvitha Tummala |
+            SWE 645 Assignment 1
+        </p>
+
+    </footer>
+
+    <script>
+    document.querySelector("form").addEventListener("submit", function(event) {
+        event.preventDefault();
+        alert("Thank you for submitting the form!");
+    });
+</script>
+
+
+</body>
+
+</html>

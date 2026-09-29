@@ -1,0 +1,693 @@
+/*
+Name: Bhuvitha Tummala
+G Number: G01576792
+Course: SWE 645
+Assignment: Assignment 1
+Purpose: Provides styling and layout for the student homepage and survey form.
+*/
+
+/* Reset default spacing and set box sizing */
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+    font-family: Arial, sans-serif;
+
+}
+
+/* Main page background and text styling */
+body {
+
+    background: linear-gradient(
+        to right,
+        #eef2f3,
+        #dfe9f3
+    );
+
+    color: #222;
+
+    line-height: 1.6;
+
+}
+
+
+/* Homepage hero section */
+
+.hero {
+
+    background:
+        linear-gradient(
+            135deg,
+            #006633,
+            #009966
+        );
+
+    color: white;
+
+    text-align: center;
+
+    padding: 35px 20px 38px;
+
+}
+
+/* Profile image */
+.profile-pic {
+
+    width: 95px;
+
+    height: 95px;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+
+    border: 4px solid white;
+
+    margin-bottom: 10px;
+
+}
+
+
+.hero h1 {
+
+    font-size: 22px;
+
+    margin-bottom: 4px;
+
+}
+
+
+.hero p {
+
+    font-size: 13px;
+
+}
+
+
+.hero .contact {
+
+    font-size: 10px;
+
+    margin-top: 4px;
+
+}
+
+
+/* =========================
+   Sections
+   ========================= */
+
+section {
+
+    width: 70%;
+
+    max-width: 1100px;
+
+    margin: auto;
+
+    padding: 30px 20px;
+
+}
+
+
+/* =========================
+   Section Headings
+   ========================= */
+
+h2 {
+
+    text-align: center;
+
+    color: #006633;
+
+    font-size: 20px;
+
+    margin-bottom: 25px;
+
+}
+
+
+h2::after {
+
+    content: "";
+
+    display: block;
+
+    width: 30px;
+
+    height: 2px;
+
+    background: #009966;
+
+    margin: 8px auto;
+
+}
+
+
+/* =========================
+   About
+   ========================= */
+
+.about {
+
+    text-align: center;
+
+}
+
+
+.about p {
+
+    max-width: 800px;
+
+    margin: 0 auto 12px;
+
+    font-size: 13px;
+
+}
+
+
+/* =========================
+   Skills
+   ========================= */
+
+.skills {
+
+    text-align: center;
+
+}
+
+
+.skills-grid {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+}
+
+
+.skills-grid span {
+
+    background: white;
+
+    padding: 7px 14px;
+
+    border-radius: 20px;
+
+    font-size: 11px;
+
+    color: #006633;
+
+    box-shadow:
+        0 3px 8px rgba(0, 0, 0, 0.12);
+
+    transition: 0.3s;
+
+}
+
+
+.skills-grid span:hover {
+
+    transform: translateY(-3px);
+
+    background: #006633;
+
+    color: white;
+
+}
+
+
+/* =========================
+   Cards
+   ========================= */
+
+.card {
+
+    background: white;
+
+    max-width: 700px;
+
+    margin: 20px auto;
+
+    padding: 22px 28px;
+
+    border-radius: 10px;
+
+    border-left: 5px solid #006633;
+
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, 0.10);
+
+}
+
+
+.card h3 {
+
+    font-size: 17px;
+
+    margin-bottom: 3px;
+
+}
+
+
+.card p {
+
+    font-size: 15px;
+
+}
+
+
+.card ul {
+
+    margin-top: 8px;
+
+    padding-left: 20px;
+
+}
+
+
+.card li {
+
+    font-size: 12px;
+
+    margin-bottom: 5px;
+
+}
+
+
+.company {
+
+    color: #009966;
+
+    font-weight: bold;
+
+}
+
+
+
+/* Assignment links and buttons */
+.links-section {
+
+    background: white;
+
+    max-width: 700px;
+
+    border-left: 5px solid #006633;
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, 0.10);
+
+    text-align: center;
+
+    margin-top: 35px;
+
+    margin-bottom: 40px;
+
+}
+
+
+.links-section p {
+
+    font-size: 16px;
+
+    margin-bottom: 12px;
+
+}
+
+
+.button-container {
+
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 20px;
+
+}
+
+
+.yellow-button {
+
+    display: inline-block;
+
+    background: #ffcc00;
+
+    color: white;
+
+    text-decoration: none;
+
+    padding: 11px 20px;
+
+    border-radius: 25px;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+
+}
+
+
+.yellow-button:hover {
+
+    background: #e6b800;
+
+    transform: translateY(-2px);
+
+}
+
+
+/* =========================
+   Footer
+   ========================= */
+
+footer {
+
+    background: #006633;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 15px;
+
+    font-size: 11px;
+
+}
+
+
+
+/* Mobile responsive design */
+@media (max-width: 768px) {
+
+    section {
+
+        width: 95%;
+
+    }
+
+
+    .hero h1 {
+
+        font-size: 20px;
+
+    }
+
+
+    .button-container {
+
+        flex-direction: column;
+
+        align-items: center;
+
+    }
+
+
+    .yellow-button {
+
+        width: 90%;
+
+    }
+
+}
+
+
+/* Survey page header */
+.survey-header {
+
+    background: linear-gradient(
+        135deg,
+        #006633,
+        #009966
+    );
+
+    color: white;
+
+    text-align: center;
+
+    padding: 40px 20px;
+
+}
+
+
+.survey-header h1 {
+
+    font-size: 32px;
+
+    margin-bottom: 5px;
+
+}
+
+
+.survey-header p {
+
+    margin: 0;
+
+}
+
+/* Survey form container */
+.survey-container {
+
+    width: 80%;
+
+    max-width: 1000px;
+
+    margin: 40px auto;
+
+    background: white;
+
+    padding: 35px;
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, 0.12);
+
+}
+
+/* Form fields and spacing */
+.form-group {
+
+    margin-bottom: 22px;
+
+}
+
+
+.form-group label {
+
+    display: block;
+
+    margin-bottom: 7px;
+
+    font-size: 15px;
+
+}
+
+
+.form-group input[type="text"],
+.form-group input[type="tel"],
+.form-group input[type="email"],
+.form-group input[type="date"],
+.form-group select,
+.form-group textarea {
+
+    width: 100%;
+
+    padding: 11px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 5px;
+
+    font-size: 14px;
+
+}
+
+
+.form-group textarea {
+
+    resize: vertical;
+
+}
+
+/* Required field indicator */
+.required {
+
+    color: red;
+
+}
+
+
+.question {
+
+    font-weight: bold;
+
+    margin-bottom: 12px;
+
+}
+
+/* Checkbox and radio button options */
+.inline-option {
+
+    display: inline-block !important;
+
+    margin-right: 18px;
+
+}
+
+
+.inline-option input {
+
+    margin-right: 5px;
+
+}
+
+/* Help text for form fields */
+.help-text {
+
+    color: #555;
+
+    font-size: 13px;
+
+    margin-bottom: 8px;
+
+}
+
+/* Form buttons */
+.button-area {
+
+    text-align: center;
+
+    margin-top: 30px;
+
+}
+
+
+.yellow-button {
+
+    display: inline-block;
+
+    background: #ffcc00;
+
+    color: #222;
+
+    border: none;
+
+    text-decoration: none;
+
+    padding: 11px 22px;
+
+    border-radius: 25px;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+}
+
+
+.yellow-button:hover {
+
+    background: #e6b800;
+
+}
+
+/* Cancel button */
+.cancel-button {
+
+    background: #777;
+
+    color: white;
+
+    border: none;
+
+    padding: 11px 22px;
+
+    border-radius: 25px;
+
+    font-size: 14px;
+
+    margin-left: 10px;
+
+    cursor: pointer;
+
+}
+
+/* Home button */
+.home-button {
+
+    display: inline-block;
+
+    background: #006633;
+
+    color: white;
+
+    text-decoration: none;
+
+    padding: 11px 22px;
+
+    border-radius: 25px;
+
+    font-size: 14px;
+
+    margin-left: 10px;
+
+}
+
+
+.home-button:hover {
+
+    background: #004d26;
+
+}
+
+/* Survey page mobile layout */
+@media (max-width: 700px) {
+
+    .survey-container {
+
+        width: 95%;
+
+        padding: 20px;
+
+    }
+
+
+    .inline-option {
+
+        display: block !important;
+
+        margin-bottom: 8px;
+
+    }
+
+
+    .button-area input,
+    .button-area a {
+
+        display: block;
+
+        width: 100%;
+
+        margin: 10px 0;
+
+    }
+
+}

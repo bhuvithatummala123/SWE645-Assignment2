@@ -1,0 +1,22 @@
+# SWE 645 Assignment 2
+# This Deployment runs three replicas of the student survey Docker image.
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: swe645-survey-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: swe645-survey
+  template:
+    metadata:
+      labels:
+        app: swe645-survey
+    spec:
+      containers:
+        - name: swe645-survey
+          image: bhuvithat/swe645-survey:latest
+          ports:
+            - containerPort: 80
