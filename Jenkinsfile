@@ -27,8 +27,10 @@ pipeline {
                 )]) {
 
                     powershell '''
-                        $env:DOCKER_PASSWORD | & "$env:DOCKER_PATH" login -u "$env:DOCKER_USERNAME" --password-stdin
-                    '''
+    Write-Host "Docker username received by Jenkins: [$env:DOCKER_USERNAME]"
+    Write-Host "Docker password length: $($env:DOCKER_PASSWORD.Length)"
+    $env:DOCKER_PASSWORD | & "$env:DOCKER_PATH" login -u "$env:DOCKER_USERNAME" --password-stdin
+'''
 
                     bat '"%DOCKER_PATH%" push %DOCKER_IMAGE%:%BUILD_NUMBER%'
                     bat '"%DOCKER_PATH%" push %DOCKER_IMAGE%:latest'
