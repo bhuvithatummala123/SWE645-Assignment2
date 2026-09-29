@@ -6,14 +6,15 @@ pipeline {
 
     environment {
         DOCKER_IMAGE = 'bhuvithat/swe645-survey'
+        DOCKER_PATH = 'C:\\Users\\bhuvi\\AppData\\Local\\Programs\\DockerDesktop\\resources\\bin\\docker.exe'
     }
 
     stages {
 
         stage('Build Docker Image') {
             steps {
-                bat 'docker build -t %DOCKER_IMAGE%:%BUILD_NUMBER% .'
-                bat 'docker tag %DOCKER_IMAGE%:%BUILD_NUMBER% %DOCKER_IMAGE%:latest'
+                bat '"%DOCKER_PATH%" build -t %DOCKER_IMAGE%:%BUILD_NUMBER% .'
+                bat '"%DOCKER_PATH%" tag %DOCKER_IMAGE%:%BUILD_NUMBER% %DOCKER_IMAGE%:latest'
             }
         }
 
@@ -24,9 +25,9 @@ pipeline {
                     usernameVariable: 'DOCKER_USERNAME',
                     passwordVariable: 'DOCKER_PASSWORD'
                 )]) {
-                    bat 'echo %DOCKER_PASSWORD% | docker login -u %DOCKER_USERNAME% --password-stdin'
-                    bat 'docker push %DOCKER_IMAGE%:%BUILD_NUMBER%'
-                    bat 'docker push %DOCKER_IMAGE%:latest'
+                    bat 'echo %DOCKER_PASSWORD% | "%DOCKER_PATH%" login -u %DOCKER_USERNAME% --password-stdin'
+                    bat '"%DOCKER_PATH%" push %DOCKER_IMAGE%:%BUILD_NUMBER%'
+                    bat '"%DOCKER_PATH%" push %DOCKER_IMAGE%:latest'
                 }
             }
         }
